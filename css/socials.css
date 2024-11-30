@@ -1,0 +1,81 @@
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.social-card {
+    background-color: #111;
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+}
+
+.social-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 13px 0px #9cffd1bf;
+}
+
+.social-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.social-info {
+    flex-grow: 1;
+}
+
+.social-info h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.follower-count, .status {
+    font-size: 0.9rem;
+    color: #9cffd1;
+}
+
+.social-header i {
+    font-size: 1.8rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-card:hover i {
+    color: #9cffd1;
+}
+
+/* Platform-specific styles */
+[data-platform="instagram"] .social-header i {
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-platform="discord"] .social-header i {
+    color: #5865F2;
+}
+
+[data-platform="github"] .social-header i {
+    color: #fff;
+}
+
+/* Animation delays */
+.socials .social-card:nth-child(1) { animation-delay: 0.2s; }
+.socials .social-card:nth-child(2) { animation-delay: 0.4s; }
+.socials .social-card:nth-child(3) { animation-delay: 0.6s; }
+.socials .social-card:nth-child(4) { animation-delay: 0.8s; } 
